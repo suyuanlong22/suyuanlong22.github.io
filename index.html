@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yuanlong Su | Homepage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #222;
+      background: #d8dde0;
+    }
+
+    nav {
+      height: 70px;
+      background: rgba(60, 70, 78, 0.75);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12%;
+      position: sticky;
+      top: 0;
+    }
+
+    nav .name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 16px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 80px auto;
+      background: rgba(255, 255, 255, 0.78);
+      border-radius: 24px;
+      padding: 35px;
+    }
+
+    .home {
+      display: flex;
+      gap: 35px;
+      align-items: flex-start;
+    }
+
+    img.profile {
+      width: 230px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .item {
+      margin-top: 22px;
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.65);
+      border-radius: 16px;
+    }
+
+    a {
+      color: #0066cc;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div>
+      <div class="name">Yuanlong Su</div>
+      <div>PhD Student</div>
+    </div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#publication">Publication</a>
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+  </nav>
+
+  <section id="home" class="home">
+    <img class="profile" src="profile.jpg" alt="Yuanlong Su">
+    <div>
+      <h1>Yuanlong Su</h1>
+      <p><b>Research interests:</b> environmental engineering, urban noise, machine learning, and air quality.</p>
+
+      <p>
+        I am a PhD student in Environmental Engineering at Washington University in St. Louis.
+        My work focuses on source-specific urban environmental exposure, including noise and air pollution.
+      </p>
+
+      <p>
+        I use audio sensing, machine learning, and environmental data analysis to study how urban environments affect public health.
+      </p>
+    </div>
+  </section>
+
+  <section id="publication">
+    <h2>Publication</h2>
+    <div class="item">
+      <p><b>Coming soon.</b></p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="item">
+      <h3>Urban Noise Source Apportionment</h3>
+      <p>Machine-learning-based analysis of urban sound recordings to estimate source-specific noise exposure.</p>
+      <p><a href="#">Code</a></p>
+    </div>
+
+    <div class="item">
+      <h3>Urban Heat and Greenness</h3>
+      <p>Analysis of spatial temperature patterns and vegetation-related cooling in urban neighborhoods.</p>
+      <p><a href="#">Code</a></p>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="item">
+      <p>Photos will be added here.</p>
+    </div>
+  </section>
+</body>
+</html>
