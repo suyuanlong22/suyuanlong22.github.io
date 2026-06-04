@@ -2,146 +2,272 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Yuanlong Su | Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuanlong Su</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #222;
-      background: #d8dde0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f1ec;
+      color: #1f2933;
     }
 
-    nav {
-      height: 70px;
-      background: rgba(60, 70, 78, 0.75);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 12%;
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 56px 24px;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 48px;
+    }
+
+    aside {
       position: sticky;
-      top: 0;
+      top: 40px;
+      align-self: start;
+      background: #1f2933;
+      color: white;
+      padding: 28px;
+      border-radius: 18px;
     }
 
-    nav .name {
-      font-size: 20px;
-      font-weight: bold;
+    .profile {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 22px;
     }
 
-    nav a {
+    aside h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.1;
+    }
+
+    aside p {
+      color: #d7dde3;
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    aside a {
       color: white;
       text-decoration: none;
-      margin-left: 30px;
-      font-size: 16px;
+      border-bottom: 1px solid #9ca3af;
+    }
+
+    main {
+      padding-top: 8px;
+    }
+
+    .label {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 12px;
+    }
+
+    .hero {
+      border-bottom: 2px solid #1f2933;
+      padding-bottom: 34px;
+      margin-bottom: 38px;
+    }
+
+    .hero h2 {
+      margin: 0 0 18px 0;
+      font-size: 46px;
+      line-height: 1.08;
+      max-width: 760px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      line-height: 1.65;
+      max-width: 760px;
     }
 
     section {
-      max-width: 1000px;
-      margin: 80px auto;
-      background: rgba(255, 255, 255, 0.78);
-      border-radius: 24px;
-      padding: 35px;
+      margin-bottom: 42px;
     }
 
-    .home {
-      display: flex;
-      gap: 35px;
-      align-items: flex-start;
+    h3 {
+      font-size: 25px;
+      margin: 0 0 18px 0;
     }
 
-    img.profile {
-      width: 230px;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-
-    h1 {
-      font-size: 38px;
-      margin-top: 0;
-    }
-
-    h2 {
-      font-size: 28px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .item {
-      margin-top: 22px;
-      padding: 18px;
-      background: rgba(255, 255, 255, 0.65);
+    .card {
+      background: white;
+      border: 1px solid #ded8cf;
       border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .card h4 {
+      margin: 0 0 8px 0;
+      font-size: 19px;
+    }
+
+    .card p {
+      margin: 0;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 12px;
+      margin-right: 8px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #eef0f2;
+      font-size: 13px;
+      color: #374151;
     }
 
     a {
-      color: #0066cc;
+      color: #0f5fa8;
+    }
+
+    footer {
+      margin-top: 54px;
+      padding-top: 22px;
+      border-top: 1px solid #c9c1b8;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        position: static;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <nav>
-    <div>
-      <div class="name">Yuanlong Su</div>
-      <div>PhD Student</div>
-    </div>
-    <div>
-      <a href="#home">Home</a>
-      <a href="#publication">Publication</a>
-      <a href="#projects">Projects</a>
-      <a href="#gallery">Gallery</a>
-    </div>
-  </nav>
+  <div class="page">
 
-  <section id="home" class="home">
-    <img class="profile" src="profile.jpg" alt="Yuanlong Su">
-    <div>
+    <aside>
+      <img class="profile" src="profile.jpg" alt="Yuanlong Su">
+
       <h1>Yuanlong Su</h1>
-      <p><b>Research interests:</b> environmental engineering, urban noise, machine learning, and air quality.</p>
 
       <p>
-        I am a PhD student in Environmental Engineering at Washington University in St. Louis.
-        My work focuses on source-specific urban environmental exposure, including noise and air pollution.
+        PhD student in Environmental Engineering at Washington University in St. Louis.
       </p>
 
       <p>
-        I use audio sensing, machine learning, and environmental data analysis to study how urban environments affect public health.
+        I study urban environmental exposure using field measurements, machine learning, and statistical analysis.
       </p>
-    </div>
-  </section>
 
-  <section id="publication">
-    <h2>Publication</h2>
-    <div class="item">
-      <p><b>Coming soon.</b></p>
-    </div>
-  </section>
+      <p>
+        <a href="mailto:suyuanlong22@gmail.com">Email</a>
+        ·
+        <a href="https://github.com/suyuanlong22">GitHub</a>
+      </p>
+    </aside>
 
-  <section id="projects">
-    <h2>Projects</h2>
+    <main>
+      <div class="hero">
+        <div class="label">Personal Academic Homepage</div>
 
-    <div class="item">
-      <h3>Urban Noise Source Apportionment</h3>
-      <p>Machine-learning-based analysis of urban sound recordings to estimate source-specific noise exposure.</p>
-      <p><a href="#">Code</a></p>
-    </div>
+        <h2>Environmental data analysis for urban exposure and public health.</h2>
 
-    <div class="item">
-      <h3>Urban Heat and Greenness</h3>
-      <p>Analysis of spatial temperature patterns and vegetation-related cooling in urban neighborhoods.</p>
-      <p><a href="#">Code</a></p>
-    </div>
-  </section>
+        <p>
+          My work focuses on how people experience urban environments at fine spatial and temporal scales.
+          I use sensing data, machine learning, and environmental models to study noise, heat, vegetation, and air pollution.
+        </p>
+      </div>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="item">
-      <p>Photos will be added here.</p>
-    </div>
-  </section>
+      <section>
+        <h3>Research Focus</h3>
+
+        <div class="card">
+          <h4>Urban noise source apportionment</h4>
+          <p>
+            Estimating source-specific urban noise exposure from long-term audio recordings using machine-learning-based classification and separation.
+          </p>
+          <span class="tag">Urban noise</span>
+          <span class="tag">Audio ML</span>
+          <span class="tag">Exposure</span>
+        </div>
+
+        <div class="card">
+          <h4>Urban heat and greenness</h4>
+          <p>
+            Studying spatial temperature patterns and vegetation-related cooling across urban neighborhoods.
+          </p>
+          <span class="tag">Urban heat</span>
+          <span class="tag">Greenness</span>
+          <span class="tag">Environmental sensing</span>
+        </div>
+
+        <div class="card">
+          <h4>Air pollution and dust</h4>
+          <p>
+            Analyzing particulate matter, dust indicators, and environmental monitoring data for urban air-quality applications.
+          </p>
+          <span class="tag">PM</span>
+          <span class="tag">Dust</span>
+          <span class="tag">Air quality</span>
+        </div>
+      </section>
+
+      <section>
+        <h3>Selected Projects</h3>
+
+        <div class="card">
+          <h4>Green Heart Louisville noise analysis</h4>
+          <p>
+            Long-term urban audio analysis for identifying traffic, aircraft, biological sounds, and other major sound sources.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Urban temperature modeling</h4>
+          <p>
+            Spatial analysis of neighborhood-scale temperature variation using environmental and built-environment predictors.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Environmental monitoring workflow</h4>
+          <p>
+            Data cleaning, visualization, and reproducible analysis workflows for field-based environmental datasets.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h3>Publications</h3>
+
+        <div class="card">
+          <h4>Coming soon</h4>
+          <p>
+            Manuscripts and preprints will be listed here when available.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        Last updated: 2026
+      </footer>
+    </main>
+
+  </div>
 </body>
 </html>
