@@ -1,426 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yuanlong Su — Ph.D. candidate at Washington University in St. Louis working on machine learning, multimodal data, scientific computing, and environmental sensing.">
-  <title>Yuanlong Su</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Yuanlong Su | Washington University in St. Louis</title>
+  <meta name="description" content="Yuanlong Su is a Ph.D. candidate at Washington University in St. Louis working on machine learning, multimodal data, scientific computing, and environmental sensing.">
+  <meta name="author" content="Yuanlong Su">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://suyuanlong22.github.io/">
+
+  <meta property="og:title" content="Yuanlong Su | Washington University in St. Louis">
+  <meta property="og:description" content="Ph.D. candidate working on machine learning, multimodal data, scientific computing, and environmental sensing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://suyuanlong22.github.io/">
+  <meta property="og:image" content="https://suyuanlong22.github.io/profile.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yuanlong Su",
+    "url": "https://suyuanlong22.github.io/",
+    "image": "https://suyuanlong22.github.io/profile.jpg",
+    "email": "mailto:s.yuanlong@wustl.edu",
+    "jobTitle": "Ph.D. Candidate",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Washington University in St. Louis"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Tsinghua University"
+    },
+    "sameAs": [
+      "https://github.com/suyuanlong22",
+      "https://www.linkedin.com/in/yuanlongsu"
+    ]
+  }
+  </script>
 
   <style>
-    :root {
-      --text: #24292f;
-      --muted: #57606a;
-      --link: #0969da;
-      --line: #d8dee4;
-      --soft: #f6f8fa;
-      --max: 980px;
-    }
-
-    * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       background: #fff;
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.65;
+      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15.5px;
+      line-height: 1.62;
     }
 
     a {
-      color: var(--link);
+      color: #1b5e9e;
       text-decoration: none;
     }
 
-    a:hover { text-decoration: underline; }
-
-    .site-header {
-      border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.96);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    a:hover {
+      text-decoration: underline;
     }
 
-    .nav {
-      max-width: var(--max);
+    .page {
+      max-width: 960px;
       margin: 0 auto;
-      min-height: 58px;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+      padding: 42px 24px 60px;
     }
 
-    .nav-name {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--text);
-      white-space: nowrap;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 20px;
+    .topnav {
+      text-align: right;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 34px;
       font-size: 14px;
     }
 
-    .nav-links a { color: var(--muted); }
-
-    .page {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 54px 24px 72px;
+    .topnav a {
+      color: #333;
+      margin-left: 20px;
     }
 
-    .intro {
+    .layout {
       display: grid;
-      grid-template-columns: 1fr 210px;
-      gap: 52px;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 48px;
       align-items: start;
-      padding-bottom: 42px;
-      border-bottom: 1px solid var(--line);
     }
 
-    .intro h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 42px;
-      line-height: 1.15;
-      margin: 0 0 8px;
-      letter-spacing: -0.02em;
+    .sidebar {
+      font-size: 14px;
     }
 
-    .role {
-      font-size: 18px;
-      color: var(--muted);
-      margin: 0 0 22px;
-    }
-
-    .intro p {
-      margin: 0 0 14px;
-      max-width: 700px;
-    }
-
-    .links {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 18px;
-      font-size: 15px;
-    }
-
-    .profile {
-      width: 210px;
-      aspect-ratio: 1 / 1;
+    .photo {
+      width: 190px;
+      height: 190px;
       object-fit: cover;
-      border-radius: 6px;
-      border: 1px solid var(--line);
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+
+    .title {
+      margin: 0 0 14px;
+      color: #555;
+      line-height: 1.45;
+    }
+
+    .contact {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+    }
+
+    .contact li {
+      margin: 7px 0;
+    }
+
+    main {
+      min-width: 0;
     }
 
     section {
-      padding-top: 38px;
+      margin-bottom: 34px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      margin: 0 0 14px;
+      font-weight: 700;
     }
 
     h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 27px;
-      margin: 0 0 18px;
-      line-height: 1.25;
+      font-size: 23px;
+      margin: 0 0 13px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ddd;
+      font-weight: 700;
     }
 
-    h3 {
-      margin: 0 0 5px;
-      font-size: 17px;
-      line-height: 1.4;
+    p {
+      margin: 0 0 12px;
     }
 
-    p { margin-top: 0; }
-
-    .news,
-    .plain-list,
-    .pub-list {
+    ul {
       margin: 0;
       padding-left: 22px;
     }
 
-    .news li,
-    .plain-list li,
-    .pub-list li {
-      margin-bottom: 10px;
+    li {
+      margin-bottom: 9px;
+    }
+
+    .news {
+      list-style: none;
+      padding: 0;
+    }
+
+    .news li {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 12px;
+      margin-bottom: 9px;
     }
 
     .date {
-      display: inline-block;
-      min-width: 78px;
-      color: var(--muted);
-      font-variant-numeric: tabular-nums;
+      color: #666;
+      white-space: nowrap;
     }
 
-    .research-item,
-    .education-item,
-    .honor-item {
-      margin-bottom: 24px;
+    .pubs {
+      padding-left: 21px;
     }
 
-    .research-item p,
-    .education-item p,
-    .honor-item p {
-      margin: 4px 0 0;
-      color: var(--muted);
+    .pubs li {
+      margin-bottom: 15px;
+      padding-left: 2px;
     }
 
-    .meta {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .pub-list {
-      padding-left: 24px;
-    }
-
-    .pub-list li {
-      padding-left: 4px;
-      margin-bottom: 16px;
-    }
-
-    .pub-title {
+    .paper-title {
       font-weight: 600;
-      color: var(--text);
     }
 
     .venue {
+      color: #555;
       font-style: italic;
-      color: var(--muted);
     }
 
-    .small {
-      font-size: 14px;
-      color: var(--muted);
+    .entry {
+      margin-bottom: 18px;
+    }
+
+    .entry-title {
+      font-weight: 600;
+    }
+
+    .entry-meta {
+      color: #555;
     }
 
     footer {
-      margin-top: 52px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 13px;
+      margin-top: 38px;
+      padding-top: 14px;
+      border-top: 1px solid #ddd;
+      color: #777;
+      font-size: 12.5px;
     }
 
-    @media (max-width: 720px) {
-      .site-header { position: static; }
-
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-        padding-top: 14px;
-        padding-bottom: 14px;
-        gap: 8px;
+    @media (max-width: 760px) {
+      .page {
+        padding-top: 24px;
       }
 
-      .nav-links {
-        justify-content: flex-start;
-        gap: 10px 16px;
+      .topnav {
+        text-align: left;
+        line-height: 2;
+        margin-bottom: 26px;
       }
 
-      .page { padding-top: 36px; }
+      .topnav a {
+        margin: 0 16px 0 0;
+      }
 
-      .intro {
+      .layout {
         grid-template-columns: 1fr;
-        gap: 26px;
+        gap: 28px;
       }
 
-      .intro h1 { font-size: 36px; }
+      .photo {
+        width: 160px;
+        height: 160px;
+      }
 
-      .profile {
-        width: 170px;
-        grid-row: 1;
+      .news li {
+        grid-template-columns: 72px 1fr;
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="nav-name" href="#top">Yuanlong Su</a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
-        <a href="#honors">Honors</a>
-        <a href="#personal">Personal</a>
-      </div>
+  <div class="page">
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#honors">Honors</a>
+      <a href="#education">Education</a>
+      <a href="#personal">Personal</a>
     </nav>
-  </header>
 
-  <main class="page" id="top">
-    <section class="intro" id="about">
-      <div>
-        <h1>Yuanlong Su</h1>
-        <p class="role">Ph.D. Candidate · Machine Learning · Multimodal Data · Scientific Computing</p>
+    <div class="layout">
+      <aside class="sidebar">
+        <img class="photo" src="profile.jpg" alt="Yuanlong Su">
 
-        <p>
-          I am a Ph.D. candidate in Energy, Environmental &amp; Chemical Engineering at
-          Washington University in St. Louis, advised by Prof. Jay Turner.
-          My research develops machine-learning and scientific-computing methods for
-          extracting useful information from environmental observations, including audio,
-          microscopy, sensor time series, and geospatial data.
-        </p>
-
-        <p>
-          I received my B.E. in Environmental Engineering from Tsinghua University in 2024.
-          I am from Beijing, China.
-        </p>
-
-        <p>
-          My current work focuses on multimodal representation learning, audio classification
-          and source separation, computer vision, and spatiotemporal modeling, with applications
-          to urban noise, heat, and particulate pollution.
-        </p>
-
-        <div class="links">
-          <a href="mailto:s.yuanlong@wustl.edu">Email</a>
-          <a href="https://github.com/suyuanlong22">GitHub</a>
-
-          <!-- TODO: Replace this with your actual LinkedIn profile URL. -->
-          <a href="https://www.linkedin.com/in/your-linkedin-id">LinkedIn</a>
-
-          <!-- TODO: Upload your PDF CV to this repository as CV_Yuanlong_Su.pdf. -->
-          <a href="CV_Yuanlong_Su.pdf">CV</a>
+        <div class="name">Yuanlong Su</div>
+        <div class="title">
+          Ph.D. Candidate<br>
+          Washington University in St. Louis
         </div>
-      </div>
 
-      <img class="profile" src="profile.jpg" alt="Yuanlong Su">
-    </section>
+        <ul class="contact">
+          <li><a href="mailto:s.yuanlong@wustl.edu">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/yuanlongsu" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/suyuanlong22" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://docs.google.com/document/d/1X3nGdS6JH4C8K1QZqvS9mV2aB7cN8pL0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a></li>
+        </ul>
+      </aside>
 
-    <section id="news">
-      <h2>News</h2>
-      <ul class="news">
-        <li><span class="date">2026.04</span> Passed the Ph.D. candidacy examination at Washington University in St. Louis.</li>
-        <li><span class="date">2024.08</span> Started my Ph.D. in Energy, Environmental &amp; Chemical Engineering at Washington University in St. Louis.</li>
-        <li><span class="date">2024.06</span> Graduated from Tsinghua University with a B.E. in Environmental Engineering.</li>
-      </ul>
-    </section>
+      <main>
+        <section id="about">
+          <h1>About Me</h1>
+          <p>
+            I am a Ph.D. candidate in Energy, Environmental &amp; Chemical Engineering at
+            Washington University in St. Louis, advised by Prof. Jay Turner.
+            I received my B.E. in Environmental Engineering from Tsinghua University in 2024.
+          </p>
+          <p>
+            My research lies at the intersection of machine learning, multimodal data,
+            scientific computing, and environmental sensing. I develop computational methods
+            for extracting source-specific and spatially resolved information from audio,
+            microscopy, sensor time series, and geospatial data.
+          </p>
+          <p>
+            My current work includes semantic urban-noise analysis, hyperlocal temperature
+            modeling, automated single-particle classification, and particulate-matter event detection.
+          </p>
+        </section>
 
-    <section id="research">
-      <h2>Research</h2>
+        <section id="news">
+          <h2>News</h2>
+          <ul class="news">
+            <li>
+              <span class="date">2026.05</span>
+              <span>Passed the Ph.D. candidacy examination at Washington University in St. Louis.</span>
+            </li>
+            <li>
+              <span class="date">2024.08</span>
+              <span>Started my Ph.D. at Washington University in St. Louis.</span>
+            </li>
+            <li>
+              <span class="date">2024.06</span>
+              <span>Received my B.E. in Environmental Engineering from Tsinghua University.</span>
+            </li>
+          </ul>
+        </section>
 
-      <div class="research-item">
-        <h3>Semantic audio analysis for urban noise</h3>
-        <p>
-          Developing source-specific urban noise analysis using CLAP-based sound classification,
-          semantic audio decomposition, and long-term acoustic monitoring. Current models achieved
-          96.2% zero-shot classification accuracy and 99.0% supervised accuracy on a 12-class
-          environmental sound dataset.
-        </p>
-      </div>
+        <section id="research">
+          <h2>Research</h2>
 
-      <div class="research-item">
-        <h3>Hyperlocal urban temperature modeling</h3>
-        <p>
-          Building LightGBM models that combine sensor observations, meteorology, and
-          Swin-Transformer representations of high-resolution imagery to estimate neighborhood-scale
-          air temperature. Continuous withheld-period RMSE is 0.33°C, with spatial leave-site-out
-          RMSE of 0.34–0.52°C.
-        </p>
-      </div>
+          <div class="entry">
+            <div class="entry-title">Semantic audio analysis for urban noise</div>
+            <div>
+              Machine-learning methods for source-specific urban noise exposure using long-term
+              audio recordings, CLAP-based sound classification, and semantic audio decomposition.
+            </div>
+          </div>
 
-      <div class="research-item">
-        <h3>Multimodal single-particle classification</h3>
-        <p>
-          Developing automated classification workflows for electron-microscopy particle data using
-          elemental composition and morphology. The current dataset includes 4,302 particles from
-          21 passive-sampler datasets with 28 engineered predictors.
-        </p>
-      </div>
+          <div class="entry">
+            <div class="entry-title">Hyperlocal urban temperature modeling</div>
+            <div>
+              Multimodal modeling of neighborhood-scale air temperature using dense sensor observations,
+              meteorology, high-resolution imagery, Swin Transformer representations, and LightGBM.
+            </div>
+          </div>
 
-      <div class="research-item">
-        <h3>Dust-event detection from sensor time series</h3>
-        <p>
-          Developed an unsupervised event-detection workflow for long-term particulate-matter data,
-          combining targeted feature engineering with non-negative matrix factorization. Evaluation
-          against reported events produced approximately 84% sensitivity and 89% precision.
-        </p>
-      </div>
-    </section>
+          <div class="entry">
+            <div class="entry-title">Automated single-particle classification</div>
+            <div>
+              Machine-learning workflows for classifying microscopy-derived particles using elemental
+              composition, morphology, and multimodal particle descriptors.
+            </div>
+          </div>
 
-    <section id="publications">
-      <h2>Selected Publications &amp; Manuscripts</h2>
-      <ol class="pub-list">
-        <li>
-          <span class="pub-title">Semantic Audio Decomposition for Source-Specific Urban Noise Energy Apportionment.</span><br>
-          <strong>Yuanlong Su</strong> et al.<br>
-          <span class="venue">First-author manuscript in preparation for IEEE/ACM Transactions on Audio, Speech, and Language Processing.</span>
-        </li>
+          <div class="entry">
+            <div class="entry-title">Particulate-matter event detection</div>
+            <div>
+              Unsupervised detection and quantification of dust events from long-term sensor time series
+              using feature engineering and non-negative matrix factorization.
+            </div>
+          </div>
+        </section>
 
-        <li>
-          <span class="pub-title">Central Asia Dust Event Detection and Quantification Using Low-Cost Particulate Matter Sensors.</span><br>
-          <strong>Yuanlong Su</strong>, Xuan Liu, Guohui Zheng, Michael Amonor, Jay Turner.<br>
-          <span class="venue">First-author manuscript in preparation for Journal of Geophysical Research: Atmospheres.</span>
-        </li>
+        <section id="publications">
+          <h2>Selected Publications &amp; Manuscripts</h2>
+          <ol class="pubs">
+            <li>
+              <span class="paper-title">Semantic Audio Decomposition for Source-Specific Urban Noise Energy Apportionment.</span><br>
+              <strong>Yuanlong Su</strong> et al.<br>
+              <span class="venue">First-author manuscript in preparation for IEEE/ACM Transactions on Audio, Speech, and Language Processing.</span>
+            </li>
 
-        <li>
-          Lei, J., <strong>Su, Y.</strong>, Jian, S., et al.
-          <span class="pub-title">Warming Effects on Soil Microbial Communities Are Amplified in Cool Months.</span>
-          <span class="venue">The ISME Journal, 18(1), wrae088, 2024.</span>
-        </li>
+            <li>
+              <span class="paper-title">Central Asia Dust Event Detection and Quantification Using Low-Cost Particulate Matter Sensors.</span><br>
+              <strong>Yuanlong Su</strong>, Xuan Liu, Guangjie Zheng, and J. Turner.<br>
+              <span class="venue">First-author manuscript in preparation for Journal of Geophysical Research: Atmospheres.</span>
+            </li>
 
-        <li>
-          Zhang, J., Zhang, L., Hu, N., Dai, Y., Xu, J., <strong>Su, Y.</strong>, et al.
-          <a class="pub-title" href="https://dwxb.alljournals.net/dwxben/article/html/20230506?st=article_issue">
-            Biodiversity Monitoring of a Giant Panda Population Recovery Region with Infrared Cameras.
-          </a>
-          <span class="venue">Chinese Journal of Zoology, 58(5), 687–702, 2023.</span>
-        </li>
-      </ol>
-    </section>
+            <li>
+              Lei, J., <strong>Su, Y.</strong>, Jian, S., et al.
+              <span class="paper-title">Warming Effects on Soil Microbial Communities Are Amplified in Cool Months.</span>
+              <span class="venue">The ISME Journal, 18(1), wrae088, 2024.</span>
+            </li>
 
-    <section id="education">
-      <h2>Education</h2>
+            <li>
+              Zhang, J., Zhang, L., Hu, N., Dai, Y., Xu, J., <strong>Su, Y.</strong>, et al.
+              <span class="paper-title">Biodiversity Monitoring of a Giant Panda Population Recovery Region with Infrared Cameras.</span>
+              <span class="venue">Chinese Journal of Zoology, 58(5), 687-702, 2023.</span>
+            </li>
+          </ol>
+        </section>
 
-      <div class="education-item">
-        <h3>Washington University in St. Louis</h3>
-        <div class="meta">Ph.D. Candidate, Energy, Environmental &amp; Chemical Engineering · Aug 2024 – May 2029 (expected)</div>
-        <p>
-          Advisor: Prof. Jay Turner. Candidacy examination passed in April 2026.
-        </p>
-      </div>
+        <section id="honors">
+          <h2>Honors &amp; Leadership</h2>
+          <ul>
+            <li>Veolia Scholarship for Outstanding Scientific Research, 2023</li>
+            <li>Sport Excellence Scholarship, 2023</li>
+            <li>TOYOTA Scholarship for Outstanding Social Work, 2022</li>
+            <li>HACH Scholarship for Outstanding Student, 2021</li>
+            <li>President, Tsinghua Mountaineering Club, 2021-2022</li>
+          </ul>
+        </section>
 
-      <div class="education-item">
-        <h3>Tsinghua University</h3>
-        <div class="meta">B.E., Environmental Engineering, School of Environment · Aug 2019 – Jun 2024</div>
-      </div>
-    </section>
+        <section id="education">
+          <h2>Education</h2>
 
-    <section id="honors">
-      <h2>Honors &amp; Leadership</h2>
-      <ul class="plain-list">
-        <li>Veolia Scholarship for Outstanding Scientific Research, 2023</li>
-        <li>Sport Excellence Scholarship, 2023</li>
-        <li>TOYOTA Scholarship for Outstanding Social Work, 2022</li>
-        <li>HACH Scholarship for Outstanding Student, 2021</li>
-        <li>President, Tsinghua Mountaineering Club, 2021–2022</li>
-      </ul>
-    </section>
+          <div class="entry">
+            <div class="entry-title">Washington University in St. Louis</div>
+            <div class="entry-meta">
+              Ph.D. Candidate, Energy, Environmental &amp; Chemical Engineering<br>
+              Aug. 2024 - May 2029 (expected)
+            </div>
+          </div>
 
-    <section id="personal">
-      <h2>Personal</h2>
-      <p>
-        I am from Beijing, China. Outside research, I enjoy climbing, mountaineering, running, and outdoor sports.
-      </p>
-    </section>
+          <div class="entry">
+            <div class="entry-title">Tsinghua University</div>
+            <div class="entry-meta">
+              B.E., Environmental Engineering, School of Environment<br>
+              Aug. 2019 - Jun. 2024
+            </div>
+          </div>
+        </section>
 
-    <footer>
-      © 2026 Yuanlong Su · Hosted on GitHub Pages
-    </footer>
-  </main>
+        <section id="personal">
+          <h2>Personal</h2>
+          <p>
+            I am from Beijing, China. Outside research, I enjoy climbing, mountaineering, running, and outdoor sports.
+          </p>
+        </section>
+
+        <footer>
+          © 2026 Yuanlong Su · Last updated August 2026
+        </footer>
+      </main>
+    </div>
+  </div>
 </body>
 </html>
