@@ -1,273 +1,427 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yuanlong Su — Ph.D. candidate at Washington University in St. Louis working on machine learning, multimodal data, scientific computing, and environmental sensing.">
   <title>Yuanlong Su</title>
 
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --text: #24292f;
+      --muted: #57606a;
+      --link: #0969da;
+      --line: #d8dee4;
+      --soft: #f6f8fa;
+      --max: 980px;
     }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f1ec;
-      color: #1f2933;
-    }
-
-    .page {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 56px 24px;
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 48px;
-    }
-
-    aside {
-      position: sticky;
-      top: 40px;
-      align-self: start;
-      background: #1f2933;
-      color: white;
-      padding: 28px;
-      border-radius: 18px;
-    }
-
-    .profile {
-      width: 100%;
-      border-radius: 14px;
-      margin-bottom: 22px;
-    }
-
-    aside h1 {
-      margin: 0;
-      font-size: 30px;
-      line-height: 1.1;
-    }
-
-    aside p {
-      color: #d7dde3;
-      line-height: 1.55;
-      font-size: 15px;
-    }
-
-    aside a {
-      color: white;
-      text-decoration: none;
-      border-bottom: 1px solid #9ca3af;
-    }
-
-    main {
-      padding-top: 8px;
-    }
-
-    .label {
-      font-size: 13px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #6b7280;
-      margin-bottom: 12px;
-    }
-
-    .hero {
-      border-bottom: 2px solid #1f2933;
-      padding-bottom: 34px;
-      margin-bottom: 38px;
-    }
-
-    .hero h2 {
-      margin: 0 0 18px 0;
-      font-size: 46px;
-      line-height: 1.08;
-      max-width: 760px;
-    }
-
-    .hero p {
-      font-size: 19px;
+      background: #fff;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
       line-height: 1.65;
-      max-width: 760px;
-    }
-
-    section {
-      margin-bottom: 42px;
-    }
-
-    h3 {
-      font-size: 25px;
-      margin: 0 0 18px 0;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #ded8cf;
-      border-radius: 16px;
-      padding: 22px;
-      margin-bottom: 18px;
-    }
-
-    .card h4 {
-      margin: 0 0 8px 0;
-      font-size: 19px;
-    }
-
-    .card p {
-      margin: 0;
-      line-height: 1.6;
-      color: #374151;
-    }
-
-    .tag {
-      display: inline-block;
-      margin-top: 12px;
-      margin-right: 8px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: #eef0f2;
-      font-size: 13px;
-      color: #374151;
     }
 
     a {
-      color: #0f5fa8;
+      color: var(--link);
+      text-decoration: none;
     }
 
-    footer {
-      margin-top: 54px;
-      padding-top: 22px;
-      border-top: 1px solid #c9c1b8;
-      color: #6b7280;
+    a:hover { text-decoration: underline; }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      min-height: 58px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 20px;
       font-size: 14px;
     }
 
-    @media (max-width: 800px) {
-      .page {
+    .nav-links a { color: var(--muted); }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 54px 24px 72px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 210px;
+      gap: 52px;
+      align-items: start;
+      padding-bottom: 42px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .intro h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      line-height: 1.15;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .role {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 22px;
+    }
+
+    .intro p {
+      margin: 0 0 14px;
+      max-width: 700px;
+    }
+
+    .links {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      font-size: 15px;
+    }
+
+    .profile {
+      width: 210px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+    }
+
+    section {
+      padding-top: 38px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      margin: 0 0 18px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 0 0 5px;
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    p { margin-top: 0; }
+
+    .news,
+    .plain-list,
+    .pub-list {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .news li,
+    .plain-list li,
+    .pub-list li {
+      margin-bottom: 10px;
+    }
+
+    .date {
+      display: inline-block;
+      min-width: 78px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .research-item,
+    .education-item,
+    .honor-item {
+      margin-bottom: 24px;
+    }
+
+    .research-item p,
+    .education-item p,
+    .honor-item p {
+      margin: 4px 0 0;
+      color: var(--muted);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .pub-list {
+      padding-left: 24px;
+    }
+
+    .pub-list li {
+      padding-left: 4px;
+      margin-bottom: 16px;
+    }
+
+    .pub-title {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .venue {
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .small {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 52px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 720px) {
+      .site-header { position: static; }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        gap: 8px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 10px 16px;
+      }
+
+      .page { padding-top: 36px; }
+
+      .intro {
         grid-template-columns: 1fr;
+        gap: 26px;
       }
 
-      aside {
-        position: static;
-      }
+      .intro h1 { font-size: 36px; }
 
-      .hero h2 {
-        font-size: 34px;
+      .profile {
+        width: 170px;
+        grid-row: 1;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-name" href="#top">Yuanlong Su</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#honors">Honors</a>
+        <a href="#personal">Personal</a>
+      </div>
+    </nav>
+  </header>
 
-    <aside>
-      <img class="profile" src="profile.jpg" alt="Yuanlong Su">
-
-      <h1>Yuanlong Su</h1>
-
-      <p>
-        PhD student in Environmental Engineering at Washington University in St. Louis.
-      </p>
-
-      <p>
-        I build semantic audio and environmental sensing workflows that convert long-term urban sensor streams into source-specific exposure metrics for noise, heat, and air pollution.
-      </p>
-
-      <p>
-        <a href="mailto:suyuanlong22@gmail.com">Email</a>
-        ·
-        <a href="https://github.com/suyuanlong22">GitHub</a>
-      </p>
-    </aside>
-
-    <main>
-      <div class="hero">
-        <div class="label">Personal Academic Homepage</div>
-
-        <h2>Environmental data analysis for urban exposure and public health.</h2>
+  <main class="page" id="top">
+    <section class="intro" id="about">
+      <div>
+        <h1>Yuanlong Su</h1>
+        <p class="role">Ph.D. Candidate · Machine Learning · Multimodal Data · Scientific Computing</p>
 
         <p>
-          My work focuses on how people experience urban environments at fine spatial and temporal scales.
-          I use sensing data, machine learning, and environmental models to predict real-time and hyperlocal noise, heat, vegetation, and air pollution.
+          I am a Ph.D. candidate in Energy, Environmental &amp; Chemical Engineering at
+          Washington University in St. Louis, advised by Prof. Jay Turner.
+          My research develops machine-learning and scientific-computing methods for
+          extracting useful information from environmental observations, including audio,
+          microscopy, sensor time series, and geospatial data.
+        </p>
+
+        <p>
+          I received my B.E. in Environmental Engineering from Tsinghua University in 2024.
+          I am from Beijing, China.
+        </p>
+
+        <p>
+          My current work focuses on multimodal representation learning, audio classification
+          and source separation, computer vision, and spatiotemporal modeling, with applications
+          to urban noise, heat, and particulate pollution.
+        </p>
+
+        <div class="links">
+          <a href="mailto:s.yuanlong@wustl.edu">Email</a>
+          <a href="https://github.com/suyuanlong22">GitHub</a>
+
+          <!-- TODO: Replace this with your actual LinkedIn profile URL. -->
+          <a href="https://www.linkedin.com/in/your-linkedin-id">LinkedIn</a>
+
+          <!-- TODO: Upload your PDF CV to this repository as CV_Yuanlong_Su.pdf. -->
+          <a href="CV_Yuanlong_Su.pdf">CV</a>
+        </div>
+      </div>
+
+      <img class="profile" src="profile.jpg" alt="Yuanlong Su">
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li><span class="date">2026.04</span> Passed the Ph.D. candidacy examination at Washington University in St. Louis.</li>
+        <li><span class="date">2024.08</span> Started my Ph.D. in Energy, Environmental &amp; Chemical Engineering at Washington University in St. Louis.</li>
+        <li><span class="date">2024.06</span> Graduated from Tsinghua University with a B.E. in Environmental Engineering.</li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <div class="research-item">
+        <h3>Semantic audio analysis for urban noise</h3>
+        <p>
+          Developing source-specific urban noise analysis using CLAP-based sound classification,
+          semantic audio decomposition, and long-term acoustic monitoring. Current models achieved
+          96.2% zero-shot classification accuracy and 99.0% supervised accuracy on a 12-class
+          environmental sound dataset.
         </p>
       </div>
 
-      <section>
-        <h3>Research Focus</h3>
+      <div class="research-item">
+        <h3>Hyperlocal urban temperature modeling</h3>
+        <p>
+          Building LightGBM models that combine sensor observations, meteorology, and
+          Swin-Transformer representations of high-resolution imagery to estimate neighborhood-scale
+          air temperature. Continuous withheld-period RMSE is 0.33°C, with spatial leave-site-out
+          RMSE of 0.34–0.52°C.
+        </p>
+      </div>
 
-        <div class="card">
-          <h4>Urban noise source apportionment</h4>
-          <p>
-            Estimating source-specific urban noise exposure from long-term audio recordings using machine-learning-based classification and separation.
-          </p>
-          <span class="tag">Urban noise</span>
-          <span class="tag">Audio ML</span>
-          <span class="tag">Exposure</span>
-        </div>
+      <div class="research-item">
+        <h3>Multimodal single-particle classification</h3>
+        <p>
+          Developing automated classification workflows for electron-microscopy particle data using
+          elemental composition and morphology. The current dataset includes 4,302 particles from
+          21 passive-sampler datasets with 28 engineered predictors.
+        </p>
+      </div>
 
-        <div class="card">
-          <h4>Urban heat and greenness</h4>
-          <p>
-            Studying spatial temperature patterns and vegetation-related cooling across urban neighborhoods.
-          </p>
-          <span class="tag">Urban heat</span>
-          <span class="tag">Greenness</span>
-          <span class="tag">Environmental sensing</span>
-        </div>
+      <div class="research-item">
+        <h3>Dust-event detection from sensor time series</h3>
+        <p>
+          Developed an unsupervised event-detection workflow for long-term particulate-matter data,
+          combining targeted feature engineering with non-negative matrix factorization. Evaluation
+          against reported events produced approximately 84% sensitivity and 89% precision.
+        </p>
+      </div>
+    </section>
 
-        <div class="card">
-          <h4>Air pollution and dust</h4>
-          <p>
-            Analyzing particulate matter, dust indicators, and environmental monitoring data for urban air-quality applications.
-          </p>
-          <span class="tag">PM</span>
-          <span class="tag">Dust</span>
-          <span class="tag">Air quality</span>
-        </div>
-      </section>
+    <section id="publications">
+      <h2>Selected Publications &amp; Manuscripts</h2>
+      <ol class="pub-list">
+        <li>
+          <span class="pub-title">Semantic Audio Decomposition for Source-Specific Urban Noise Energy Apportionment.</span><br>
+          <strong>Yuanlong Su</strong> et al.<br>
+          <span class="venue">First-author manuscript in preparation for IEEE/ACM Transactions on Audio, Speech, and Language Processing.</span>
+        </li>
 
-      <section>
-        <h3>Selected Projects</h3>
+        <li>
+          <span class="pub-title">Central Asia Dust Event Detection and Quantification Using Low-Cost Particulate Matter Sensors.</span><br>
+          <strong>Yuanlong Su</strong>, Xuan Liu, Guohui Zheng, Michael Amonor, Jay Turner.<br>
+          <span class="venue">First-author manuscript in preparation for Journal of Geophysical Research: Atmospheres.</span>
+        </li>
 
-        <div class="card">
-          <h4>Green Heart Louisville noise analysis</h4>
-          <p>
-            Long-term urban audio analysis for identifying traffic, aircraft, biological sounds, and other major sound sources.
-          </p>
-        </div>
+        <li>
+          Lei, J., <strong>Su, Y.</strong>, Jian, S., et al.
+          <span class="pub-title">Warming Effects on Soil Microbial Communities Are Amplified in Cool Months.</span>
+          <span class="venue">The ISME Journal, 18(1), wrae088, 2024.</span>
+        </li>
 
-        <div class="card">
-          <h4>Urban temperature modeling</h4>
-          <p>
-            Spatial analysis of neighborhood-scale temperature variation using environmental and built-environment predictors.
-          </p>
-        </div>
+        <li>
+          Zhang, J., Zhang, L., Hu, N., Dai, Y., Xu, J., <strong>Su, Y.</strong>, et al.
+          <a class="pub-title" href="https://dwxb.alljournals.net/dwxben/article/html/20230506?st=article_issue">
+            Biodiversity Monitoring of a Giant Panda Population Recovery Region with Infrared Cameras.
+          </a>
+          <span class="venue">Chinese Journal of Zoology, 58(5), 687–702, 2023.</span>
+        </li>
+      </ol>
+    </section>
 
-        <div class="card">
-          <h4>Environmental monitoring workflow</h4>
-          <p>
-            Data cleaning, visualization, and reproducible analysis workflows for field-based environmental datasets.
-          </p>
-        </div>
-      </section>
+    <section id="education">
+      <h2>Education</h2>
 
-      <section>
-        <h3>Publications</h3>
+      <div class="education-item">
+        <h3>Washington University in St. Louis</h3>
+        <div class="meta">Ph.D. Candidate, Energy, Environmental &amp; Chemical Engineering · Aug 2024 – May 2029 (expected)</div>
+        <p>
+          Advisor: Prof. Jay Turner. Candidacy examination passed in April 2026.
+        </p>
+      </div>
 
-        <div class="card">
-          <h4>Coming soon</h4>
-          <p>
-            Manuscripts and preprints will be listed here when available.
-          </p>
-        </div>
-      </section>
+      <div class="education-item">
+        <h3>Tsinghua University</h3>
+        <div class="meta">B.E., Environmental Engineering, School of Environment · Aug 2019 – Jun 2024</div>
+      </div>
+    </section>
 
-      <footer>
-        Last updated: 2026
-      </footer>
-    </main>
+    <section id="honors">
+      <h2>Honors &amp; Leadership</h2>
+      <ul class="plain-list">
+        <li>Veolia Scholarship for Outstanding Scientific Research, 2023</li>
+        <li>Sport Excellence Scholarship, 2023</li>
+        <li>TOYOTA Scholarship for Outstanding Social Work, 2022</li>
+        <li>HACH Scholarship for Outstanding Student, 2021</li>
+        <li>President, Tsinghua Mountaineering Club, 2021–2022</li>
+      </ul>
+    </section>
 
-  </div>
+    <section id="personal">
+      <h2>Personal</h2>
+      <p>
+        I am from Beijing, China. Outside research, I enjoy climbing, mountaineering, running, and outdoor sports.
+      </p>
+    </section>
+
+    <footer>
+      © 2026 Yuanlong Su · Hosted on GitHub Pages
+    </footer>
+  </main>
 </body>
 </html>
